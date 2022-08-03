@@ -107,7 +107,7 @@ def get_dataset(hparams):
     )
 
     tokenizer = tfds.deprecated.text.SubwordTextEncoder.build_from_corpus(
-        questions + answers, target_vocab_size=2**13
+        questions + answers, target_vocab_size=2**14
     )
 
     hparams.start_token = [tokenizer.vocab_size]
