@@ -56,6 +56,7 @@ def load_conversations(hparams, lines_filename, conversations_filename):
             answers.append(preprocess_sentence(id2line[conversation[i + 1]]))
             if len(questions) >= hparams.max_samples:
                 return questions, answers
+    # print(len(questions))
     return questions, answers
 
 
